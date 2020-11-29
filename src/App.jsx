@@ -1,13 +1,16 @@
 import React from 'react';
 import {GlobalStyle} from  './styles/GlobalStyles';
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home/Home';
 const App = () => {
  return (
     <> 
     <GlobalStyle /> 
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path='/' exact component={Home} /> 
+        </Switch>    
+    </BrowserRouter>
     </>
   )
 };
