@@ -1,15 +1,17 @@
 import React from 'react';
 import {GlobalStyle} from  './styles/GlobalStyles';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './pages/Home/Home';
+import Header from './components/Header/Header';
+import Form from './components/Form/Form';
 const App = () => {
  return (
     <> 
     <GlobalStyle /> 
     <BrowserRouter>
       <Switch>
-        <Route path='/' exact component={Home} /> 
         </Switch>    
+      <Header /> 
+      <Form />
     </BrowserRouter>
     </>
   )
